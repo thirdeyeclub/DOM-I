@@ -42,7 +42,11 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-//nav bar
-const navbar = Array.from(document.querySelectorAll('nav a'));
-navbar.forEach(function(e,i){e.innerHTML == siteContent[`nav`][`nav-item-${i+1}`];});
 
+
+//nav bar
+
+const nav = document.querySelectorAll("nav a");
+nav.forEach((E, i)   =>  {
+    return E.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+});
